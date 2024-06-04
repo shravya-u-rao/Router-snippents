@@ -1,4 +1,4 @@
-js
+```js
 npx create-react-app my-app --template typescript
 npx create-react-app --template typescript .
 npm i react-bootstrap
@@ -65,3 +65,4 @@ const { firstname, secondname } = useParams<{
  }>();
 --------------------------------------------------
 navigate(-1);
+```
