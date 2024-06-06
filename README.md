@@ -66,3 +66,32 @@ const { firstname, secondname } = useParams<{
 --------------------------------------------------
 navigate(-1);
 ```
+# detecting component mounting and unmounting
+```
+import React, { useEffect, useState } from "react";
+function Lable() {
+  useEffect(() => {
+    console.log("Component Mounted");
+    return () => {
+      console.log("Component unMounted");
+    };
+  },[]);
+  return <h1>lable</h1>;
+}
+function App() {
+  const [showLable, setShowLable] = useState(false);
+  const handleIncreas = () => {
+    setShowLable(!showLable);
+  };
+
+  return (
+    <div className="App">
+      <button onClick={handleIncreas}>Increase</button>
+      {showLable && <Lable />}
+    </div>
+  );
+}
+
+export default App;
+
+```
