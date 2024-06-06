@@ -67,7 +67,7 @@ const { firstname, secondname } = useParams<{
 navigate(-1);
 ```
 # detecting component mounting and unmounting
-```
+```js
 import React, { useEffect, useState } from "react";
 function Lable() {
   useEffect(() => {
